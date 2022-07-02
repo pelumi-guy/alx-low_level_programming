@@ -7,18 +7,18 @@
  **/
 int main(void)
 {
-	int dig;
+	int dig1;
+	int dig2;
 
-	for (dig = 0; dig <= 9; dig++)
+	for (dig1 = 0; dig1 <= 9; dig1++)
 	{	
-		putchar(48 + dig);
-		if (dig < 9)
+		for (dig2 = 0; dig2 <= 9; dig2++) 
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(48 + dig1);
+			putchar(48 + dig2);
 		}
-
 	}
+
 
 	putchar('\n');
 	return (0);
