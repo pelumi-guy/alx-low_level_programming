@@ -11,19 +11,21 @@ int main(void)
 	int dig2;
 
 	for (dig1 = 0; dig1 <= 9; dig1++)
-	{	
-		for (dig2 = 0; dig2 <= 9; dig2++) 
+	{
+		for (dig2 = 0; dig2 <= 9; dig2++)
 		{
 			if (dig1 != dig2 && dig1 < dig2)
 			{
 			putchar(48 + dig1);
 			putchar(48 + dig2);
-			putchar(',');
-			putchar(' ');
+				if (dig1 + dig2 != 17)
+				{
+				putchar(',');
+				putchar(' ');
+				}
 			}
 		}
 	}
-
 
 	putchar('\n');
 	return (0);
