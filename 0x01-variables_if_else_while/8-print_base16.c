@@ -9,11 +9,11 @@ int main(void)
 {
 	char dig;
 
-	for(dig = '0'; dig <= '9'; dig++)
+	for (dig = '0'; dig <= '9'; dig++)
 	{
 		putchar(dig);
 	}
-	for(dig = 'a'; dig < 'g'; dig++)
+	for (dig = 'a'; dig < 'g'; dig++)
 	{
 		putchar(dig);
 	}
