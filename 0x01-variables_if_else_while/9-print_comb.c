@@ -7,15 +7,15 @@
  **/
 int main(void)
 {
-	char dig1;
-	char dig2;
+	int dig1;
+	int dig2;
 
-	for (dig1 = '0'; dig1 <= '9'; dig1++)
+	for (dig1 = 0; dig1 <= 9; dig1++)
 	{	
-		for (dig2 = '0'; dig2 <= '9'; dig2++) 
+		for (dig2 = 0; dig2 <= 9; dig2++) 
 		{
-			putchar(dig1);
-			putchar(dig2);
+			putchar(48 + dig1);
+			putchar(48 + dig2);
 		}
 	}
 
