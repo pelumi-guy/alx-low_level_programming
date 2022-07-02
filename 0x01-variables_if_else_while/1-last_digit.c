@@ -6,14 +6,15 @@
  * Description: Get a random number and check its last digit, compare it with 5
  * Return: 0
  *
-/* betty style doc for function main goes there */
+ * betty style doc for function main goes there 
+ */
 int main(void)
 {
-	int n;
+	int n, last;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int last = n % 10;
+	last = n % 10;
 	if (last > 5)
 		printf("Last digit of %d is %d and is greater than 5\n", n, last);
 	else if (last == 0)
