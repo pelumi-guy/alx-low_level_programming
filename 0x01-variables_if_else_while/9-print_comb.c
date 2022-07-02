@@ -10,7 +10,7 @@ int main(void)
 	int dig;
 
 	for (dig = 0; dig <= 9; dig++)
-	{	
+	{
 		putchar(48 + dig);
 		if (dig < 9)
 		{
