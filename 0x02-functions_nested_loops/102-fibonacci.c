@@ -8,9 +8,9 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-	int i, prev = 1, next = 1, count = 1, fib;
+	unsigned long i, prev = 1, next = 1, count = 1, fib;
 
 	for (i = 1; ; i++)
 	{
@@ -18,7 +18,7 @@ int main()
 		{
 			fib = 1;
 			count++;
-			printf("%d, ", fib);
+			printf("%lu, ", fib);
 		}
 		else if (count < 50)
 		{
@@ -26,7 +26,7 @@ int main()
 			prev = next;
 			next = fib;
 			count++;
-			printf("%d, ", fib);
+			printf("%lu, ", fib);
 		}
 		else if (count == 50)
 		{
@@ -34,11 +34,11 @@ int main()
 			prev = next;
 			next = fib;
 			count++;
-			printf("%d", fib);
+			printf("%lu", fib);
 			break;
 
 		}
-		
+
 	}
 	printf("\n");
 
