@@ -55,7 +55,7 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(' ');	
 				_putchar(num + '0');
-				_putchar(',')	
+				_putchar(',');	
 
 			}
 		}
