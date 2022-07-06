@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * main - main block
  * Description: a program that prints
