@@ -16,21 +16,38 @@ void times_table(void)
 		for (col = 0; col <= 9; col++)
 		{
 			num = row * col;
-			if (num < 10)
+			if (col == 0)
 			{
 				_putchar(num + '0');
 				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');		
+
 			}
-			else 
+			else if (num < 10)
+			{	
+				_putchar(' ');
+				_putchar(' ');	
+				_putchar(num + '0');
+				_putchar(',');		
+			}
+			else if (num >= 10 && num != 81)
 			{
 				dig1 = num / 10;
 				dig2 = num % 10;
+
+				_putchar(' ');	
 				_putchar(dig1 + '0');
 				_putchar(dig2 + '0');
 				_putchar(',');
-				_putchar(' ');
+
+			}
+			else
+			{
+				dig1 = num / 10;
+				dig2 = num % 10;
+
+				_putchar(' ');	
+				_putchar(dig1 + '0');
+				_putchar(dig2 + '0');
 
 			}
 		}
