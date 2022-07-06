@@ -6,41 +6,43 @@
  * Return: Always 0 (Success)
  */
 
-#include <stdio.h>
-
 int main(void)
 {
-	unsigned long i, prev = 1, next = 1, count = 1, fib;
+	int count;
+	unsigned long prev, next, fib;
+	unsigned long m, n, p, carry;
 
-	for (i = 1; ; i++)
+	count = 0;
+	prev = 0;
+	next = 1;
+	for (count = 1; count <= 91; count++)
 	{
-		if (i == 1)
-		{
-			fib = 1;
-			count++;
-			printf("%lu, ", fib);
-		}
-		else if (count < 98)
-		{
-			fib = prev + next;
-			prev = next;
-			next = fib;
-			count++;
-			printf("%lu, ", fib);
-		}
-		else if (count == 98)
-		{
-			fib = prev + next;
-			prev = next;
-			next = fib;
-			count++;
-			printf("%lu", fib);
-			break;
-
-		}
-
+		fib = prev + next;
+		prev = next;
+		next = fib;
+		printf("%lu, ", fib);
 	}
-	printf("\n");
-
+	m = i % 1000;
+	i = i / 1000;
+	n = j % 1000;
+	j = j / 1000;
+	while (count <= 98)
+	{
+		carry = (m + n) / 1000;
+		p = (m + n) - carry * 1000;
+		fib = (prev + next) + carry;
+		m = n;
+		n = p;
+		prev = next;
+		next = fib;
+		if (p >= 100)
+			printf("%lu%lu", fib, p);
+		else
+			printf("%lu0%lu", fib, p);
+		if (count != 98)
+			printf(", ");
+		count++;
+	}
+	putchar('\n');
 	return (0);
 }
