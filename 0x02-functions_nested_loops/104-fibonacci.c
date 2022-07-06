@@ -22,10 +22,10 @@ int main(void)
 		next = fib;
 		printf("%lu, ", fib);
 	}
-	m = i % 1000;
-	i = i / 1000;
-	n = j % 1000;
-	j = j / 1000;
+	m = prev % 1000;
+	prev = prev / 1000;
+	n = next % 1000;
+	next = next / 1000;
 	while (count <= 98)
 	{
 		carry = (m + n) / 1000;
