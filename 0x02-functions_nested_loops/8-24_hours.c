@@ -13,7 +13,7 @@
 void jack_bauer(void)
 {
 	int hr, min, h1, h2, m1, m2;
-	
+
 	for (hr = 0; hr < 24; hr++)
 	{
 		h1 = hr / 10;
