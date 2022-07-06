@@ -11,6 +11,7 @@
 void times_table(void)
 {
 	int row, col, dig1, dig2, num;
+
 	for (row = 0; row <= 9; row++)
 	{
 		for (col = 0; col <= 9; col++)
@@ -44,12 +45,10 @@ void times_table(void)
 			}
 			else
 			{_putchar(' ');
-				_putchar(' ');	
+				_putchar(' ');
 				_putchar(num + '0');
 				_putchar(',');
 
 			}
-		}
-		_putchar('\n');
-	}
-}
+		}_putchar('\n');
+	}}
