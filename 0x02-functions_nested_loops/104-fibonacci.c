@@ -5,9 +5,9 @@
   */
 int main(void)
 {
- int i;
- unsigned long prev, next, fib;
- unsigned long m, n, p, carry;
+	int i;
+	unsigned long prev, next, fib;
+	unsigned long m, n, p, carry;
 
 	i = 0;
 	prev = 0;
