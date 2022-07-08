@@ -10,24 +10,16 @@
 
 int main(void)
 {
-	long int n = 612852475143;
-	long int div = 2, ans = 0, maxPrime;
+	long int x = 612852475143;
+	long int py;
 
-	while (n != 0)
+	for (py = 2; py < x; py++)
 	{
-		if (n % div != 0)
-			div = div + 1;
-		else
+		if (x % py == 0)
 		{
-			maxPrime = n;
-			n = n / div;
-			if (n == 1)
-			{
-				printf("%ld\n", maxPrime);
-				ans = 1;
-				break;
-			}
+			x = x / py;
 		}
 	}
+	printf("%ld\n", py);
 	return (0);
 }
