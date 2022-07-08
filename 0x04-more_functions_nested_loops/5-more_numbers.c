@@ -16,14 +16,14 @@ void more_numbers(void)
 		{
 			dig1 = j / 10;
 			dig2 = j % 10;
-			
+
 			if (j >= 10)
 			{
 				_putchar(dig1 + '0');
 			}
 
 			_putchar(dig2 + '0');
-			
+
 		}
 		_putchar('\n');
 	}
