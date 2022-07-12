@@ -12,13 +12,13 @@
 
 void print_rev(char *s)
 {
-	int i, l;
+	int i, j, l;
 
 	for (i = 0; *(s + i); i++)
 		l++;
 
-	for (i = (l - 1); i >= 0; i--)
-		_putchar(*(s + i));
+	for (j = (l - 1); j >= 0; j--)
+		_putchar(*(s + j));
 
 	_putchar('\n');
 }
