@@ -22,6 +22,4 @@ void print_array(int *a, int n)
 			_putchar(a[i]);
 	}
 	_putchar('\n');
-
-	return (0);
 }
