@@ -12,7 +12,7 @@ char *leet(char *s)
 	int i, j;
 	char *strLow = "aeotl";
 	char *strUp = "AEOTL";
-	char *strNum = "43071"
+	char *strNum = "43071";
 
 	for (i = 0; s[i]; i++)
 	{
