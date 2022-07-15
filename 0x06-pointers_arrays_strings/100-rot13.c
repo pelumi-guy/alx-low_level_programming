@@ -17,8 +17,13 @@ char *rot13(char *s)
 	for (i = 0; s[i]; i++)
 	{
 		for (j = 0; origStr[j]; j++)
+		{
 			if (s[i] == origStr[j])
+			{
 				s[i] = codeStr[j];
+				break;
+			}
+		{
 	}
 
 	return (s);
