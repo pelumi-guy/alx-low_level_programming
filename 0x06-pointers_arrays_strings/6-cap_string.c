@@ -18,7 +18,7 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i]; i++)
 	{
-		if ('a' <= s[i] && s[i] <= 'z')
+		if (i == 0 && 'a' <= s[i] && s[i] <= 'z')
 			s[i] = s[i] - diff;
 
 		for (j = 0; j < 13; j++)
