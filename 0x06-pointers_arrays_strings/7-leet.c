@@ -17,7 +17,7 @@ char *leet(char *s)
 	for (i = 0; s[i]; i++)
 	{
 		for (j = 0; j < 5; j++)
-			if (s[i] == strLow[j] || s[i] == strup[j])
+			if (s[i] == strLow[j] || s[i] == strUp[j])
 				s[i] = strNum[j];
 	}
 
