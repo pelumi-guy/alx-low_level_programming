@@ -10,25 +10,22 @@
 
 char *_strchr(char *s, char c)
 {
-	char *find;
+	int find;
 	int i, l = 0;
 
-	*find = '\0';
-
-	for (i = 0; s[i]; i++)
+	for (i = 0; *(s + i); i++)
 		l++;
 
 	for (i = 0; i < l; i++)
 	{
-		if (s[i] == c)
-		{
-			find = &s[i];
+		find = *(s + i)
+
+		if (find == c)
 			break;
-		}
 	}
 
-	if (*find == c)
+	if (find == c)
 		return (find);
-	else if (*find == '\0')
+	else
 		return (NULL);
 }

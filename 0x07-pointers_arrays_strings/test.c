@@ -1,25 +1,21 @@
-/**
- * main - main block
- * Description:
- * Return: Always 0 (Success).
- */
-
+#include "main.h"
 #include <stdio.h>
 
-int main()
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-	int i;
+    char *s = "hello";
+    char *f;
 
-	for (i = 0; i < 5; i++)
-        {
-                if (i == 2)
-                {
-                        printf("Ended loop at i = 2\n");
-                        break;
-                }
-		printf("This is the itearation %d\n", i);
-        }
-	
+    f = _strchr(s, 'l');
 
-	return (0);
+    if (f != NULL)
+    {
+        printf("%s\n", f);
+    }
+    return (0);
 }
