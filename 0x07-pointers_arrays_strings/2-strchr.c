@@ -11,7 +11,7 @@
 char *_strchr(char *s, char c)
 {
 	char *find = 0;
-	int i, l;
+	int i, l = 0;
 
 	for (i = 0; s[i]; i++)
 		l++;
