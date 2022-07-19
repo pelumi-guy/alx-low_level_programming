@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
 	char *find;
 	int i, l = 0;
 
-	find = 0;
+	*find = '\0';
 
 	for (i = 0; s[i]; i++)
 		l++;
@@ -29,6 +29,6 @@ char *_strchr(char *s, char c)
 
 	if (*find == c)
 		return (find);
-	else if (find == 0)
+	else if (*find == '\0')
 		return (NULL);
 }
