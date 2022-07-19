@@ -1,5 +1,5 @@
 /**
- * void set_string - a function that sets the
+ * set_string - a function that sets the
  * value of a pointer to a char.
  * Description:
  * @s: pointer to string
