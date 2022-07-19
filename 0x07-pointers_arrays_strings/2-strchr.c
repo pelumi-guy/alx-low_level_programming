@@ -6,7 +6,7 @@
  * Return: Always pointer to first occurence of char or NULL
  */
 
-#include <stdio.h>
+#include "main.h"
 
 char *_strchr(char *s, char c)
 {
