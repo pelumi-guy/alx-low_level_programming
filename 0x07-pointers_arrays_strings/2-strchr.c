@@ -18,7 +18,7 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; i < l; i++)
 	{
-		find = *(s + i)
+		find = *(s + i);
 
 		if (find == c)
 			break;
