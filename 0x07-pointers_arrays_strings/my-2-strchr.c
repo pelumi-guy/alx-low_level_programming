@@ -10,18 +10,22 @@
 
 char *_strchr(char *s, char c)
 {
-int a;
+char *find;
+int i, l = 0;
 
-while (1)
+for (i = 0; *(s + i); i++)
+l++;
+
+for (i = 0; i < l; i++)
 {
-a = *s++;
-if (a == c)
-{
-return (s - 1);
+find = &s[i];
+
+if (*find == c)
+break;
 }
-if (a == 0)
-{
+
+if (*find == c)
+return (find);
+else
 return (NULL);
-}
-}
 }
