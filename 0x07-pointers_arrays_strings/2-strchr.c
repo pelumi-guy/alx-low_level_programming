@@ -10,8 +10,10 @@
 
 char *_strchr(char *s, char c)
 {
-	char *find = 0;
+	char *find;
 	int i, l = 0;
+
+	find = 0;
 
 	for (i = 0; s[i]; i++)
 		l++;
@@ -25,8 +27,8 @@ char *_strchr(char *s, char c)
 		}
 	}
 
-	if (find)
+	if (*find == c)
 		return (find);
-	else
+	else if (find == 0)
 		return (NULL);
 }
