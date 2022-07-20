@@ -1,8 +1,8 @@
 /**
- * _print_rev_recursion - a function that prints a string in reverse.
+ * _print_rev_recursion - a function that prints a string in reverse
  * Description:
- * @s: string to be printed in reverse
- * Return:.
+ * @s: string to be printed
+ * Return:
  */
 
 #include "main.h"
