@@ -2,7 +2,7 @@
  * _strlen_recursion - a function that returns the length of a string
  * Description:
  * @s: string to be printed
- * Return:
+ * Return: integer length os string
  */
 
 #include "main.h"
