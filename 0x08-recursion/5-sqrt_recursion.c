@@ -24,7 +24,7 @@ int pow_op(int n, int c)
  * Description:
  * @n: integer
  *
- * Return:
+ * Return: Square root
  */
 
 int _sqrt_recursion(int n)
