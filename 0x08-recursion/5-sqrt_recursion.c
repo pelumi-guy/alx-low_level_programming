@@ -15,7 +15,7 @@ int pow_op(int n, int c)
 		else
 			return (-1);
 	}
-	return (0 + power_operation(n, c + 1));
+	return (0 + pow_op(n, c + 1));
 }
 
 /**
