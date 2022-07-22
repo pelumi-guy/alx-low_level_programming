@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include "main.h"
 
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
 	printf("%d\n", argc);
 
