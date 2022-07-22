@@ -35,16 +35,20 @@ int main(int argc, char *argv[])
 {
 	long int num1, num2, sum = 1;
 
-	if (argc <= 1)
-		printf("Error");
+	if (argc < 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else
+	{
+		num1 = stringToNum(argv[1]);
+		num2 = stringToNum(argv[2]);
 
-	num1 = stringToNum(argv[1]);
-	num2 = stringToNum(argv[2]);
+		sum = num1 * num2;
 
-	sum = num1 * num2;
+		printf("%ld\n", sum);
 
-
-	printf("%ld\n", sum);
-
-	return (0);
+		return (0);
+	}
 }
