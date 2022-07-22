@@ -14,11 +14,25 @@ int stringToNum(char *str)
 	int i;
 	long int num = 0;
 
-	for (i = 0; str[i]; i++)
+	if (str[0] == '-')
 	{
-		num *= 10;
-		num += (str[i] - '0');
+		for (i = 1; str[i]; i++)
+		{
+			num *= 10;
+			num += (str[i] - '0');
+		}
+		num *= -1;
 	}
+	else if (str[0] >= '0' && str[0] <= '9')
+	{
+		for (i = 0; str[i]; i++)
+		{
+			num *= 10;
+			num += (str[i] - '0');
+		}
+	}
+
+//	printf("Num is: %ld\n", num);
 
 	return (num);
 }
@@ -35,7 +49,7 @@ int main(int argc, char *argv[])
 {
 	long int num1, num2, sum = 1;
 
-	if (argc < 3)
+	if (argc < 3 || argc > 3)
 	{
 		printf("Error\n");
 		return (1);
