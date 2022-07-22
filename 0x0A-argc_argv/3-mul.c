@@ -32,7 +32,7 @@ int stringToNum(char *str)
 		}
 	}
 
-//	printf("Num is: %ld\n", num);
+	/* printf("Num is: %ld\n", num); */
 
 	return (num);
 }
