@@ -1,12 +1,20 @@
-int stringToNum(char *str)
+/**
+ * main - main block
+ * Description:
+ * Return: Always 0 (Success).
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
 {
-	int i, num = 0;
+	int num;
+	char *str = "12345";
 
-	for (i = 0; str[i]; i++)
-	{
-		num *= 10;
-		num += (str[i] - '0');
-	}
+	num = atoi (str);
 
-	return (num);
+	printf("Your String as Num is: %d\n", num);
+
+	return (0);
 }
