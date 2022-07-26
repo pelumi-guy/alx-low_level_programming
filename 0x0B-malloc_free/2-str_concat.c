@@ -3,37 +3,6 @@
 #include "main.h"
 
 /**
- * concat - a function to concat two strings.
- * Description:
- * @str1: source string
- * @str2: source string
- * Return: concatenated string
- */
-
-char *concat(char *str1, char *str2)
-{
-	int i, j, len = 0;
-	char *dest;
-
-	if (str1 == NULL)
-		str1 = "";
-	else if (str2 == NULL)
-		str2 = "";
-
-	dest = str1;
-
-	for (i = 0; str2[i]; i++)
-		len++;
-
-	for (i = len, j = 0; str2[j]; i++, j++)
-		dest[i] = str2[j];
-
-	dest[i] = '\0';
-
-	return (dest);
-}
-
-/**
  * str_concat - a function that concatenates two strings.
  * Description:
  * @s1: string
@@ -46,21 +15,34 @@ char *concat(char *str1, char *str2)
 char *str_concat(char *s1, char *s2)
 {
 	char *newStr;
-	int i, len = 0;
+	int i, j, k, len = 0;
 
-	for (i = 0; s1[i]; i++)
+
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	for (i = 0, j = 0; s1[i]; i++, j++)
 		len++;
 
-	for (i = 0; s2[i]; i++)
+	for (i = 0, k = 0; s2[i]; i++, k++)
 		len++;
 
-
-	newStr = malloc((len * sizeof(char)) + 1);
+	newStr = malloc(sizeof(char) * (len + 1));
 
 	if (newStr == NULL)
+	{
+		free(newStr);
 		return (NULL);
+	}
 
-	newStr = concat(s1, s2);
+	for (i = 0; i < j; i++)
+		newStr[i] = s1[i];
+
+	for (j = 0; j < k; j++, i++)
+		newStr[i] = s2[j];
 
 	return (newStr);
 }
