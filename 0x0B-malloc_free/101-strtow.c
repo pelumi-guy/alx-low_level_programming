@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 int word_len(char *str);
