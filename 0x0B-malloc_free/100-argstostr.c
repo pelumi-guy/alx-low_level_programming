@@ -64,7 +64,7 @@ char *str_concat(char *s1, char *s2)
 
 char *argstostr(int ac, char **av)
 {
-	char *newStr = NULL;
+	char *oldStr = NULL, newStr;
 	int i;
 
 
@@ -74,7 +74,10 @@ char *argstostr(int ac, char **av)
 	}
 
 	for (i = 0; i < ac; i++)
-		newStr = str_concat(newStr, av[i]);
+	{
+		newStr = str_concat(oldStr, av[i]);
+		oldStr = newStr;
+	}
 
 	return (newStr);
 
