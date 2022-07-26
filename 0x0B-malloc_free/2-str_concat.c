@@ -22,7 +22,7 @@ char *concat(char *str1, char *str2)
 
 	dest = str1;
 
-	for (i = 0, str2[i]; i++)
+	for (i = 0; str2[i]; i++)
 		len++;
 
 	for (i = len, j = 0; str2[j]; i++, j++)
