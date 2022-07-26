@@ -12,7 +12,7 @@
 
 char *concat(char *str1, char *str2)
 {
-	int i, j;
+	int i, j, len = 0;
 	char *dest;
 
 	if (str1 == NULL)
@@ -20,15 +20,13 @@ char *concat(char *str1, char *str2)
 	else if (str2 == NULL)
 		str2 = "";
 
-	for (i = 0; str1[i]; i++)
-	{
-		dest[i] = str1[i];
-	}
+	dest = str1;
 
-	for (j = 0; str2[j]; i++, j++)
-	{
+	for (i = 0, str2[i]; i++)
+		len++;
+
+	for (i = len, j = 0; str2[j]; i++, j++)
 		dest[i] = str2[j];
-	}
 
 	dest[i] = '\0';
 
