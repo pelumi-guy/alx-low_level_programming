@@ -67,7 +67,7 @@ char *str_concat(char *s1, char *s2)
 
 char *argstostr(int ac, char **av)
 {
-	char *newStr;
+	char *newStr = NULL;
 	int i;
 
 
