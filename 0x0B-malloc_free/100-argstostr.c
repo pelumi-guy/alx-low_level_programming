@@ -14,7 +14,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *newStr;
+	char *Str;
 	int i, j, k, len = 0;
 
 
@@ -30,23 +30,25 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0, k = 0; s2[i]; i++, k++)
 		len++;
 
-	newStr = malloc(sizeof(char) * (len + 1));
+	Str = malloc(sizeof(char) * (len + 1));
 
-	if (newStr == NULL)
+	if (Str == NULL)
 	{
-		free(newStr);
+		free(Str);
 		return (NULL);
 	}
 
 	for (i = 0; i < j; i++)
-		newStr[i] = s1[i];
+		Str[i] = s1[i];
 
 	for (j = 0; j < k; j++, i++)
-		newStr[i] = s2[j];
+		Str[i] = s2[j];
 
-	newStr[i] = '\n';
+	Str[i] = '\n';
+	i++;
+	Str[i] = '\0';
 
-	return (newStr);
+	return (Str);
 }
 
 /**
@@ -69,9 +71,7 @@ char *argstostr(int ac, char **av)
 
 
 	if (av == NULL || ac == 0)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i < ac; i++)
 	{
