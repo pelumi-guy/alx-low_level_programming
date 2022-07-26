@@ -45,10 +45,11 @@ char *_strdup(char *str)
 		len++;
 
 	newStr = malloc((len * sizeof(char)) + 1);
-	StrCopy(str, newStr);
-	
+
 	if (newStr == NULL)
 		return (NULL);
-	else
-		return (newStr);
+
+	StrCopy(str, newStr);
+
+	return (newStr);
 }
