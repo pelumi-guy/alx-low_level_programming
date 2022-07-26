@@ -13,8 +13,14 @@
 
 void free_grid(int **grid, int height)
 {
-	int i;
+	int i, j = 0;
 
 	for (i = 0; i < height; i++)
-		realloc(grid[i], 0);
+	{
+		while (grid[i][j] == 0)
+		{
+			free(grid[i][j]);
+			j++;
+		}
+	}
 }
