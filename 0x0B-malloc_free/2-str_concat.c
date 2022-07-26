@@ -7,13 +7,13 @@
  * Description:
  * @str1: source string
  * @str2: source string
- * @dest: destination string
  * Return: concatenated string
  */
 
-char *concat(char *str1, char *str2, char *dest)
+char *concat(char *str1, char *str2)
 {
 	int i, j;
+	char *dest;
 
 	if (str1 == NULL)
 		str1 = "";
@@ -25,7 +25,7 @@ char *concat(char *str1, char *str2, char *dest)
 		dest[i] = str1[i];
 	}
 
-	for (i, j = 0; str2[j]; i++, j++)
+	for (j = 0; str2[j]; i++, j++)
 	{
 		dest[i] = str2[j];
 	}
@@ -49,9 +49,6 @@ char *str_concat(char *s1, char *s2)
 {
 	char *newStr;
 	int i, len = 0;
-
-	if (str == NULL)
-		return (NULL);
 
 	for (i = 0; s1[i]; i++)
 		len++;
