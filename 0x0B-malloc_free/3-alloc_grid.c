@@ -19,6 +19,9 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	arr = calloc((width * height), sizeof(int));
-
-	return (arr);
+	
+	if (arr == NULL)
+	       return (NULL);
+	else 
+		return (arr);
 }
