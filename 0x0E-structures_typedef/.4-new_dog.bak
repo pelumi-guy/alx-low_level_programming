@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include "dog.h"
 /**
+ * strgLen - Function that computes length of string
+ * Description:
+ * @str - string
+ * Return: Integer length of string
+ **/
+int strgLen (char *str)
+{
+	return(sizeof(str));
+}
+/**
  * new_dog - a function that creates a new dog.
  * Description:
  * @name: name of dog
@@ -14,13 +24,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 	/* int nameLen, ownerLen, i; */
 	dog_t goodboy, *newDog;
 
+	/**
+	* nameLen = strgLen(name);
+	* ownerLen = strgLen(owner);
+	**/
 	newDog = &goodboy;
 
 	newDog->name = malloc(sizeof(name));
 	if (newDog->name == NULL)
 	{
 		free(newDog);
-		return (NULL);
+		return(NULL);
 	}
 	newDog->name = name;
 
@@ -32,7 +46,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(newDog->name);
 		free(newDog->owner);
 		free(newDog);
-		return (NULL);
+		return(NULL);
 	}
 	newDog->owner = owner;
 
