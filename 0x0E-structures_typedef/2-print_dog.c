@@ -1,9 +1,9 @@
 /**
  * print_dog - a function that prints a struct dog
- * Description:
+ * Description: prints members of struct dog
  * @d: pointer to struct dog variable
  *
- * Return:
+ * Return: void
  */
 
 #include <stdio.h>
