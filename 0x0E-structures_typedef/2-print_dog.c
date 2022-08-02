@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include "dog.h"
+
 /**
  * print_dog - a function that prints a struct dog
  * Description: prints members of struct dog
@@ -5,9 +8,6 @@
  *
  * Return: void
  */
-
-#include <stdio.h>
-#include "dog.h"
 
 void print_dog(struct dog *d)
 {
