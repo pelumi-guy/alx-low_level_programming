@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 int _putchar(char c);
-#define ABS(X) (X < 0 ? X * -1 : X)
+#define ABS(X) (X < 0 ? -(X) : X)
 
 
 #endif /* FUNCTION_LIKE_MACRO_H */
