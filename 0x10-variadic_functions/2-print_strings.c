@@ -1,5 +1,5 @@
 /**
- * print_stringss - a function that prints strings, followed by a new line.
+ * print_strings - a function that prints strings, followed by a new line.
  * Description:
  * @n: number of arguments
  * @separator: sperating delinimiter
@@ -22,7 +22,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (str == NULL)
 			printf("(nil)");
 		else
-		printf("%s", str);
+			printf("%s", str);
 
 		if (i != (n - 1) && separator != NULL)
 			printf("%s", separator);
@@ -31,6 +31,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	printf("\n");
 
 	va_end(arglist);
-
 
 }
