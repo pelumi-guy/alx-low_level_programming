@@ -4,7 +4,7 @@
  * reverse_listint - a function that reverses a listint_t linked list.
  * Description:
  * @head: pointer to head node of list
- * Return:
+ * Return: pointer to new head node
  */
 
 listint_t *reverse_listint(listint_t **head)
@@ -15,13 +15,14 @@ listint_t *reverse_listint(listint_t **head)
 	if (head == NULL || *head == NULL)
 		return (NULL);
 
-	while (*head)
+	nextNode = (*head)->next;
+	(*head)->next = NULL;
+	while (nextNode)
 	{
-		nextNode = (*head)->next;
-		(*head)->next = prevNode;
 		prevNode = *head;
 		*head = nextNode;
+		nextNode = (*head)->next;
+		(*head)->next = prevNode;
 	}
-	*head = prevNode;
 	return (*head);
 }
