@@ -6,7 +6,6 @@
  * and returns the head node’s data (n)
  * Description:
  * @head: pointer to head nodeint
- * @n: integer content of new nodeint
  * Return: data (n) of popped head node.
  */
 
@@ -15,7 +14,7 @@ int pop_listint(listint_t **head)
 	int data;
 	listint_t *temp = *head;
 
-	if (*head == NULL)
+	if (*head == NULL || head == NULL)
 		return (0);
 
 	data = (*head)->n;
