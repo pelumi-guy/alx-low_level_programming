@@ -5,32 +5,35 @@
  * and prints it to the POSIX standard output.
  * Description:
  * Return: Actual number of letters
+ * @filename: input file name
+ * %letters: number of letters to read and print
  * it couls read and print of 0 if failed
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
+	ssize_t fd, r, w;
 	char *buf;
-	ssize_t count;
 
 	if (filename == NULL)
 		return (0);
 
-	buf = malloc(letters++);
+	buf = malloc(sizeof(char) * letters);
 	if (buf == NULL)
 		return (0);
 
 	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	r = read(fd, buf, letters);
+	w = write(STDOUT_FILENO, buf, r);
+
+	if (fd == -1 || r == -1 || w == -1 || w != r)
+	{
+		free(buf);
 		return (0);
+	}
 
-	count = read(fd, buf, letters);
-	buf[letters] = '\0';
-
-	write(STDIN_FILENO, buf, letters);
-
+	free(buf);
 	close (fd);
 
-        return(count);
+        return(w);
 }
