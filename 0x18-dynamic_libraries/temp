@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -c -fPIC -Wall -Werror -Wextra -pedantic *.c
-gcc -shared -o libdynamic.so *.o
+gcc -c -fPIC -Wall -Werror -Wextra -pedantic 3-op_functions.c 
+gcc -shared -o 100-operations.so 3-op_functions.o
