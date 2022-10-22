@@ -32,8 +32,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!new)
 		return (0);
 	new->key = malloc(sizeof(char) * (strlen(key) + 1));
+	if ((new->key) == NULL)
+	{
+		free(new);
+		return (0);
+	}
 	new->value = malloc(sizeof(char) * (strlen(value) + 1));
-	if ((new->key) == NULL || (new->value) == NULL)
+	if ((new->value) == NULL)
 	{
 		free(new);
 		return (0);
