@@ -16,7 +16,7 @@ void hash_table_print(const hash_table_t *ht)
 		return;
 
 	printf("{");
-	while(i < ht->size && ht->array[i] == NULL)
+	while (i < ht->size && ht->array[i] == NULL)
 		i++;
 
 	if (i < ht->size)
@@ -24,7 +24,7 @@ void hash_table_print(const hash_table_t *ht)
 		slot = ht->array[i];
 		printf("'%s': '%s'", slot->key, slot->value);
 		slot = slot->next;
-		while(slot)
+		while (slot)
 		{
 			printf(", '%s': '%s'", slot->key, slot->value);
 			slot = slot->next;
@@ -36,7 +36,7 @@ void hash_table_print(const hash_table_t *ht)
 		if (ht->array[i] == NULL)
 			continue;
 		slot = ht->array[i];
-		while(slot)
+		while (slot)
 		{
 			printf(", '%s': '%s'", slot->key, slot->value);
 			slot = slot->next;
