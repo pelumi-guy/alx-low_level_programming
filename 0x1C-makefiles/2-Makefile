@@ -1,12 +1,13 @@
+# first useful Makefile.
 CC = gcc
 NAME = school
-SRC := main.c school.c
-OBJ := $(SRC:%.c=%.o)
+SRC = main.c school.c
+OBJ = $(SRC:%.c=%.o)
 
-all: ${NAME}
+all : ${NAME}
 
-${NAME}: ${OBJ}
+${NAME} : ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
-%.o: %.c
+%.o : %.c
 	${CC} -c -o $@ $<
