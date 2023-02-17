@@ -40,7 +40,7 @@ int bin_search_util(int *array, size_t left, size_t right, int value)
 	if (!array)
 		return (-1);
 
-	if (right > left)
+	if (right >= left)
 	{
 		mid = ((right - left) / 2) + left;
 
