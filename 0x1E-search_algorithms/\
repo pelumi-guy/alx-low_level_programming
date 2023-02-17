@@ -1,0 +1,77 @@
+#include "search_algos.h"
+
+/**
+ * print_search - a function that prints the search sub-array
+ * @array: array to search
+ * @left: left edge of search sub-array
+ * @right: right edge of search sub-array
+ * Description:
+ * Return:
+ */
+
+void print_search(int *array, size_t left, size_t right)
+{
+	size_t i;
+
+	printf("Searching in array: ");
+	for (i = left; i <= right; i++)
+	{
+		printf("%d", array[i]);
+		if (i < right)
+			printf(", ");
+	}
+}
+
+/**
+ * inter_search_util - a function that searches for a value in an array
+ * of integers using the interpolation search algorithm recursively
+ * @array: array to search
+ * @left: left end of search array
+ * @right: right end of search array
+ * @value: value to search for in array
+ * Description:
+ * Return: index where value is found or -1
+ */
+
+int inter_search_util(int *array, size_t left, size_t right, int value)
+{
+	size_t pos;
+
+	if (!array)
+		return (-1);
+
+	if (right >= left)
+	{
+		pos = right
+              		+ (((double)(right - left) / (arr[right] - arr[left]))
+                 	* (x - arr[right]));
+
+		printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
+		printf("\n");
+
+		if (array[pos] == value)
+			return (pos);
+
+		if (value < array[pos])
+			return (inter_search_util(array, left, pos - 1, value));
+		else
+			return (inter_search_util(array, pos + 1, right, value));
+	}
+
+	return (-1);
+}
+
+/**
+ * interpolation_search - a function that searches for a value in an array
+ * of integers using the Interpolation search algorithm
+ * @array: array to search
+ * @size: size of search array
+ * @value: value to search for in array
+ * Description:
+ * Return: index where value is found or -1
+ */
+
+int interpolation_search(int *array, size_t size, int value)
+{
+	return (inter_search_util(array, 0, size - 1, value));
+}
