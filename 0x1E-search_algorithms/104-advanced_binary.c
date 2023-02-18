@@ -35,7 +35,7 @@ void print_search(int *array, size_t left, size_t right)
 
 int adb_search_util(int *array, size_t left, size_t right, int value)
 {
-	size_t mid, least, ans = -1;
+	size_t mid;
 
 	if (!array)
 		return (-1);
@@ -47,18 +47,13 @@ int adb_search_util(int *array, size_t left, size_t right, int value)
 		print_search(array, left, right);
 		printf("\n");
 
-		if (array[mid] == value)
-		{
-			least = adb_search_util(array, left + 1, mid, value);
-			ans = least == (size_t) -1 ? mid : least;
-		}
+		if (array[left] == value)
+			return (left);
 		else if (value < array[mid])
-			ans = adb_search_util(array, left, mid - 1, value);
+			return (adb_search_util(array, left, mid, value));
 		else
-			ans = adb_search_util(array, mid + 1, right, value);
+			return (adb_search_util(array, mid + 1, right, value));
 	}
-
-	return (ans);
 }
 
 /**
