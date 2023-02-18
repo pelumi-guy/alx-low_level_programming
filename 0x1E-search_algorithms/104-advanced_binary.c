@@ -49,7 +49,7 @@ int adb_search_util(int *array, size_t left, size_t right, int value)
 
 		if (array[mid] == value)
 		{
-			least = adb_search_util(array, left, mid - 1, value);
+			least = adb_search_util(array, left + 1, mid, value);
 			ans = least == (size_t) -1 ? mid : least;
 		}
 		else if (value < array[mid])
