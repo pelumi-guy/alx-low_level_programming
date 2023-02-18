@@ -40,20 +40,24 @@ int adb_search_util(int *array, size_t left, size_t right, int value)
 	if (!array)
 		return (-1);
 
-	if (right >= left)
+	mid = ((right - left) / 2) + left;
+
+	print_search(array, left, right);
+	printf("\n");
+
+	if (array[left] == value)
+		return (left);
+
+	if (array[left] != array[right])
 	{
-		mid = ((right - left) / 2) + left;
 
-		print_search(array, left, right);
-		printf("\n");
-
-		if (array[left] == value)
-			return (left);
-		else if (value < array[mid])
+		if (value <= array[mid])
 			return (adb_search_util(array, left, mid, value));
 		else
 			return (adb_search_util(array, mid + 1, right, value));
 	}
+
+	return (-1);
 }
 
 /**
