@@ -47,22 +47,22 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		for (i = 0; i < jump && high->index < size - 1; i++)
 			high = high->next;
 
-		printf("Value checked at index[%lu] = [%d]\n",
+		printf("Value checked at index [%lu] = [%d]\n",
 		       high->index, high->n);
 	}
 
 	/* causes 'found' msg even when value not in array */
 	printf("Value found between indexes [%lu] and [%lu]\n", low->index, high->index);
-
+	
+	printf("Value checked at index [%lu] = [%d]\n", low->index, low->n);
 	while (low->index < MIN(high->index, size - 1))
 	{
-		printf("Value checked at index[%lu] = [%d]\n", low->index, low->n);
 		low = low->next;
+		
+		printf("Value checked at index [%lu] = [%d]\n", low->index, low->n);
 		if (low->n == value)
-		{
-			printf("Value checked at index[%lu] = [%d]\n", low->index, low->n);
 			return (low);
-		}
+
 	}
 
 	return (NULL);
