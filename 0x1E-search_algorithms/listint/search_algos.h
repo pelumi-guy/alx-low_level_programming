@@ -6,7 +6,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-#define MIN(A, B) (B < A ? B : A)
+#define MIN(A, B) {B < A ? B : A}
 
 int _putchar(char c);
 int linear_search(int *array, size_t size, int value);
