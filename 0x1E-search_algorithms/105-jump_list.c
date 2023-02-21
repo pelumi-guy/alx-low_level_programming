@@ -3,20 +3,6 @@
 
 /* remember compiling math.h with gcc requires `-lm` */
 
-size_t min(size_t a, size_t b);
-
-/**
- * min - returns the minimum of two size_t values
- * @a: first value
- * @b: second value
- *
- * Return: `a` if lower or equal to `b`, `b` otherwise
- */
-size_t min(size_t a, size_t b)
-{
-	return (a <= b ? a : b);
-}
-
 /**
  * jump_list - searches for a value in a sorted linked list of integers using
  * a jump search algorithm
@@ -52,13 +38,14 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	}
 
 	/* causes 'found' msg even when value not in array */
-	printf("Value found between indexes [%lu] and [%lu]\n", low->index, high->index);
-	
+	printf("Value found between indexes [%lu] and [%lu]\n",
+		low->index, high->index);
+
 	printf("Value checked at index [%lu] = [%d]\n", low->index, low->n);
 	while (low->index < MIN(high->index, size - 1))
 	{
 		low = low->next;
-		
+
 		printf("Value checked at index [%lu] = [%d]\n", low->index, low->n);
 		if (low->n == value)
 			return (low);
